@@ -1,4 +1,6 @@
-# Binary Braille Parser
+<p align="center">
+  <h1 align="center">Binary Braille Parser</h1>
+</p>
 
 ## How it works
 
