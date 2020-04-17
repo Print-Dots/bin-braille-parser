@@ -1,3 +1,10 @@
+
+/**
+ * @method parserTextToBinBraille
+ * @param  {String} text
+ * @return {Array}
+ */
+
 function parserTextToBinBraille(text) {
   let newText = text.toLowerCase()
   let size = newText.length
