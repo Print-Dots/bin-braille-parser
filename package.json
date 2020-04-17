@@ -1,0 +1,27 @@
+{
+  "name": "bin-braille-parser",
+  "version": "1.0.0",
+  "description": "Text parser for binary braille and common braille",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Print-Dots/bin-braille-parser.git"
+  },
+  "keywords": [
+    "braille",
+    "bin-braille"
+  ],
+  "author": "Ademar Cardoso De Oliveira Júnior",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Print-Dots/bin-braille-parser/issues"
+  },
+  "homepage": "https://github.com/Print-Dots/bin-braille-parser#readme",
+  "dependencies": {
+    "braille": "^1.1.0"
+  }
+}
