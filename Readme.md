@@ -26,7 +26,7 @@ At the moment, character coverage is throughout the alphabet, numbers and single
 
 ## Demo
 
-Go to [this site](addSiteLink) and there you can test all the features of the parser.
+Go to [this site](http://binary-braille-demo.surge.sh) and there you can test all the features of the parser.
 
 ## Installing
 
