@@ -9,7 +9,7 @@ function parserTextToBinBraille(text) {
   let newText = text.toLowerCase()
   let size = newText.length
   let parsedText = []
-  const regex = /[0-9]/
+  const regexForNumbers = /[0-9]/
   let numberIndicator = [['0', '1'], ['0', '1'], ['1', '1']]
   let index_aux = 0
 
@@ -18,7 +18,6 @@ function parserTextToBinBraille(text) {
     // For the normal letters and the basic simbols
     switch (newText[i]) {
       case ' ': parsedText[index_aux] = [['0', '0'], ['0', '0'], ['0', '0']]; index_aux++; break; // adding code-number for the spaces between words
-      case '\n': parsedText[index_aux] = ['3']; index_aux++; break; // adding code-number for line breaks
       case 'a': parsedText[index_aux] = [['1', '0'], ['0', '0'], ['0', '0']]; index_aux++; break;
       case 'b': parsedText[index_aux] = [['1', '0'], ['1', '0'], ['0', '0']]; index_aux++; break;
       case 'c': parsedText[index_aux] = [['1', '1'], ['0', '0'], ['0', '0']]; index_aux++; break;
@@ -59,12 +58,14 @@ function parserTextToBinBraille(text) {
       case '=': parsedText[index_aux] = [['0', '0'], ['1', '1'], ['1', '1']]; index_aux++; break;
       case '>': parsedText[index_aux] = [['1', '0'], ['0', '1'], ['1', '0']]; index_aux++; break;
       case '<': parsedText[index_aux] = [['0', '1'], ['1', '0'], ['0', '1']]; index_aux++; break;
+      case '@': parsedText[index_aux] = [['1', '0'], ['0', '1'], ['0', '1']]; index_aux++; break;
+      case '/': parsedText[index_aux] = [['0', '0'], ['1', '1'], ['0', '1']]; index_aux++; break;
     }
 
     // for numbers
-    if (regex.test(newText[i])) {
+    if (regexForNumbers.test(newText[i])) {
 
-      if (!regex.test(newText[i - 1])) {
+      if (!regexForNumbers.test(newText[i - 1])) {
         parsedText[index_aux] = numberIndicator
         index_aux++
       }
@@ -86,6 +87,8 @@ function parserTextToBinBraille(text) {
 
   return parsedText
 }
+
+console.log(parserTextToBinBraille('Jonh snow'))
 
 module.exports =  {
   parserTextToBinBraille
