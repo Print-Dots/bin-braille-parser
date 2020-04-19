@@ -3,8 +3,26 @@
 </p>
 
 ## How it works
+Binary Braille, nicknamed BinBraille, is an abstraction from conventional Braille, in Braille each letter, symbol or number is represented by 6 possible points, where with the combination of these points the letters are formed, following an example:
 
-Add explanation of how it works
+![Image of the braille](./braille-example.png)
+
+In Binary Braille, we change the points marked by 1 and where we don't mark anything we put 0, for this variation of zeros and one, the abstraction is called Binary Braille.
+The same pattern of letters in the image above would look like this in the Binary Braille system:
+
+````js
+[ "1", "0" ],  [ "1", "0" ],  [ "1", "1" ],  [ "1", "1" ]
+[ "0", "0" ],  [ "1", "0" ],  [ "0", "0" ],  [ "0", "1" ]
+[ "0", "0" ],  [ "0", "0" ],  [ "0", "0" ],  [ "0", "0" ]
+     a              b		   c		  d
+````
+## Coverage
+
+At the moment, character coverage is throughout the alphabet, numbers and single characters:
+````bash
+(",", ";", ":", "?", "!", "@", "-", "*", "&", "$", ">", "<", "=", "+", "/")
+````
+* Any character not on this list has not yet been added.
 
 ## Demo
 
@@ -40,3 +58,10 @@ parserTextToBinBraille("Jonh snow")
 */
 
 ```
+
+----
+
+<p align="center">
+  <h5 align="center">Contribute to this project, send ideas and suggestions on <a href="https://github.com/Print-Dots/bin-braille-parser/issues">
+  issues !</a></h5>
+</p>
