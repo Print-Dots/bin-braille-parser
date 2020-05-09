@@ -17,7 +17,7 @@ function parserTextToBinBraille(text) {
 
     // For the normal letters and the basic simbols
     switch (newText[i]) {
-      case ' ': parsedText[index_aux] = [['0', '0'], ['0', '0'], ['0', '0']]; index_aux++; break; // adding code-number for the spaces between words
+      case ' ': parsedText[index_aux] = [['0', '0'], ['0', '0'], ['0', '0']]; index_aux++; break;
       case 'a': parsedText[index_aux] = [['1', '0'], ['0', '0'], ['0', '0']]; index_aux++; break;
       case 'b': parsedText[index_aux] = [['1', '0'], ['1', '0'], ['0', '0']]; index_aux++; break;
       case 'c': parsedText[index_aux] = [['1', '1'], ['0', '0'], ['0', '0']]; index_aux++; break;
@@ -44,6 +44,21 @@ function parserTextToBinBraille(text) {
       case 'w': parsedText[index_aux] = [['0', '1'], ['1', '1'], ['0', '1']]; index_aux++; break;
       case 'y': parsedText[index_aux] = [['1', '1'], ['0', '1'], ['1', '1']]; index_aux++; break;
       case 'z': parsedText[index_aux] = [['1', '0'], ['0', '1'], ['1', '1']]; index_aux++; break;
+
+      case 'á': parsedText[index_aux] = [['1', '0'], ['1', '1'], ['1', '1']]; index_aux++; break;
+      case 'é': parsedText[index_aux] = [['1', '1'], ['1', '1'], ['1', '1']]; index_aux++; break;
+      case 'í': parsedText[index_aux] = [['0', '1'], ['0', '0'], ['1', '0']]; index_aux++; break;
+      case 'ó': parsedText[index_aux] = [['0', '1'], ['0', '0'], ['1', '1']]; index_aux++; break;
+      case 'ú': parsedText[index_aux] = [['0', '1'], ['1', '1'], ['1', '1']]; index_aux++; break;
+
+      case 'à': parsedText[index_aux] = [['1', '1'], ['1', '0'], ['0', '1']]; index_aux++; break;
+
+      case 'â': parsedText[index_aux] = [['1', '0'], ['0', '0'], ['0', '1']]; index_aux++; break;
+      case 'ê': parsedText[index_aux] = [['1', '0'], ['1', '0'], ['0', '1']]; index_aux++; break;
+      case 'ô': parsedText[index_aux] = [['1', '1'], ['0', '1'], ['0', '1']]; index_aux++; break;
+
+      case 'ã': parsedText[index_aux] = [['0', '1'], ['0', '1'], ['1', '0']]; index_aux++; break;
+      case 'õ': parsedText[index_aux] = [['0', '1'], ['1', '0'], ['0', '1']]; index_aux++; break;
 
       case ',': parsedText[index_aux] = [['0', '0'], ['1', '0'], ['0', '0']]; index_aux++; break;
       case ';': parsedText[index_aux] = [['0', '0'], ['1', '0'], ['1', '0']]; index_aux++; break;
