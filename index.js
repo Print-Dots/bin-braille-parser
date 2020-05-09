@@ -6,11 +6,12 @@
  */
 
 function parserTextToBinBraille(text) {
-  let newText = text.toLowerCase()
+  // let newText = text.toLowerCase()
   let size = newText.length
   let parsedText = []
   const regexForNumbers = /[0-9]/
   let numberIndicator = [['0', '1'], ['0', '1'], ['1', '1']]
+  let capitalLetterIndicator = [['0', '1'], ['0', '0'], ['0', '1']]
   let index_aux = 0
 
   for (let i = 0; i < size; i++) {
@@ -60,6 +61,8 @@ function parserTextToBinBraille(text) {
       case 'ã': parsedText[index_aux] = [['0', '1'], ['0', '1'], ['1', '0']]; index_aux++; break;
       case 'õ': parsedText[index_aux] = [['0', '1'], ['1', '0'], ['0', '1']]; index_aux++; break;
 
+      case 'ç': parsedText[index_aux] = [['1', '1'], ['1', '0'], ['1', '1']]; index_aux++; break;
+
       case ',': parsedText[index_aux] = [['0', '0'], ['1', '0'], ['0', '0']]; index_aux++; break;
       case ';': parsedText[index_aux] = [['0', '0'], ['1', '0'], ['1', '0']]; index_aux++; break;
       case ':': parsedText[index_aux] = [['0', '0'], ['1', '1'], ['0', '0']]; index_aux++; break;
@@ -74,7 +77,16 @@ function parserTextToBinBraille(text) {
       case '>': parsedText[index_aux] = [['1', '0'], ['0', '1'], ['1', '0']]; index_aux++; break;
       case '<': parsedText[index_aux] = [['0', '1'], ['1', '0'], ['0', '1']]; index_aux++; break;
       case '@': parsedText[index_aux] = [['1', '0'], ['0', '1'], ['0', '1']]; index_aux++; break;
-      case '/': parsedText[index_aux] = [['0', '0'], ['1', '1'], ['0', '1']]; index_aux++; break;
+
+      case '°': parsedText[index_aux] = [['0', '0'], ['0', '1'], ['1', '1']]; index_aux++; break;
+      case '(': parsedText[index_aux] = [['1', '0'], ['1', '0'], ['0', '1']]; index_aux++; break;
+      case ')': parsedText[index_aux] = [['0', '1'], ['0', '1'], ['1', '0']]; index_aux++; break;
+      case '[': parsedText[index_aux] = [['1', '0'], ['1', '1'], ['1', '1']]; index_aux++; break;
+      case ']': parsedText[index_aux] = [['0', '1'], ['1', '1'], ['1', '1']]; index_aux++; break;
+
+
+      case '"': parsedText[index_aux] = [['0', '0'], ['1', '0'], ['1', '1']]; index_aux++; break;
+      case '|': parsedText[index_aux] = [['0', '1'], ['0', '1'], ['0', '1']]; index_aux++; break;
     }
 
     // for numbers
@@ -98,12 +110,40 @@ function parserTextToBinBraille(text) {
         case '9': parsedText[index_aux] = [['0', '1'], ['1', '0'], ['0', '0']]; index_aux++; break;
       }
     }
+    // for complex simbols
+    if (newText[i] === '/') {
+      parsedText[index_aux] = [['0', '0'], ['0', '0'], ['0', '1']]; index_aux++;
+      parsedText[index_aux] = [['0', '0'], ['1', '0'], ['0', '0']]; index_aux++;
+    }
+    if (newText[i] === '©') {
+      parsedText[index_aux] = [['1', '0'], ['1', '0'], ['0', '1']]; index_aux++;
+      parsedText[index_aux] = [['0', '1'], ['0', '0'], ['0', '1']]; index_aux++;
+      parsedText[index_aux] = [['1', '1'], ['0', '0'], ['0', '0']]; index_aux++;
+      parsedText[index_aux] = [['0', '1'], ['0', '1'], ['1', '0']]; index_aux++;
+    }
+    if (newText[i] === '®') {
+      parsedText[index_aux] = [['1', '0'], ['1', '0'], ['0', '1']]; index_aux++;
+      parsedText[index_aux] = [['0', '1'], ['0', '0'], ['0', '1']]; index_aux++;
+      parsedText[index_aux] = [['1', '0'], ['1', '1'], ['1', '0']]; index_aux++;
+      parsedText[index_aux] = [['0', '1'], ['0', '1'], ['1', '0']]; index_aux++;
+    }
+    if (newText[i] === '%') {
+      parsedText[index_aux] = [['0', '1'], ['0', '1'], ['0', '1']]; index_aux++;
+      parsedText[index_aux] = [['0', '0'], ['0', '1'], ['1', '1']]; index_aux++;
+    }
+    if (newText[i] === '‰') {
+      parsedText[index_aux] = [['0', '1'], ['0', '1'], ['0', '1']]; index_aux++;
+      parsedText[index_aux] = [['0', '0'], ['0', '1'], ['1', '1']]; index_aux++;
+      parsedText[index_aux] = [['0', '0'], ['0', '1'], ['1', '1']]; index_aux++;
+    }
+    if (newText[i] === '§') {
+      parsedText[index_aux] = [['0', '1'], ['1', '0'], ['1', '0']]; index_aux++;
+      parsedText[index_aux] = [['0', '1'], ['1', '0'], ['1', '0']]; index_aux++;
+    }
   }
 
   return parsedText
 }
-
-console.log(parserTextToBinBraille('Jonh snow'))
 
 module.exports =  {
   parserTextToBinBraille
