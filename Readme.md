@@ -22,7 +22,6 @@ At the moment, character coverage is throughout the alphabet, numbers and single
 ````bash
 (",", ";", ":", "?", "!", "@", "-", "*", "&", "$", ">", "<", "=", "+", "/")
 ````
-* Any character not on this list has not yet been added.
 
 ## Demo
 
@@ -35,6 +34,9 @@ Go to [this site](http://binary-braille-demo.surge.sh) and there you can test al
 ```bash
 npm i bin-braille-parser # or yarn add bin-braille-parser
 ```
+
+## Disclaimer
+This parser follows the Braille language in Brazilian standard, if you want to contribute with the conversion to other languages, feel free and submit your pull request. [**Check this official language support document.**](http://portal.mec.gov.br/docman/dezembro-2018-pdf/104041-anexo-grafia-braille-para-lingua-portguesa/file)
 
 ## Usage
 
