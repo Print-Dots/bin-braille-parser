@@ -61,6 +61,12 @@ parserTextToBinBraille("Jonh snow")
 
 ```
 
+## Running the tests
+
+```bash
+npm run test #or yarn test
+```
+
 ----
 
 <p align="center">
