@@ -23,10 +23,11 @@ The same pattern of letters in the image above would look like this in the Binar
 ````
 ## Coverage
 
-At the moment, character coverage is throughout the alphabet, numbers and single characters:
+At the moment, character coverage is throughout the alphabet, numbers, single characters and complex symbols:
 ````bash
-(",", ";", ":", "?", "!", "@", "-", "*", "&", "$", ">", "<", "=", "+", "/")
+(",", ";", ":", "?", "!", "@", "-", "*", "&", "$", ">", "<", "=", "+", "/", "%", "©")
 ````
+However, it still doesn't support specificities of other languages
 
 ## Demo
 
@@ -52,6 +53,7 @@ parserTextToBinBraille("Jonh snow")
 
 /* The return is
  [ 
+  [ [ '0', '1' ], [ '0', '0' ], [ '0', '1' ] ], Character to say that the next letter is capitalized.
   [ [ '0', '1' ], [ '1', '1' ], [ '0', '0' ] ], J
   [ [ '1', '0' ], [ '0', '1' ], [ '1', '0' ] ], o
   [ [ '1', '1' ], [ '0', '1' ], [ '1', '0' ] ], n
@@ -61,7 +63,7 @@ parserTextToBinBraille("Jonh snow")
   [ [ '1', '1' ], [ '0', '1' ], [ '1', '0' ] ], n
   [ [ '1', '0' ], [ '0', '1' ], [ '1', '0' ] ], o
   [ [ '0', '1' ], [ '1', '1' ], [ '0', '1' ] ]  w
- ]
+  ]
 */
 
 ```
