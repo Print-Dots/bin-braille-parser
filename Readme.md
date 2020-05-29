@@ -10,7 +10,7 @@
 ## How it works
 Binary Braille, nicknamed BinBraille, is an abstraction from conventional Braille, in Braille each letter, symbol or number is represented by 6 possible points, where with the combination of these points the letters are formed, following an example:
 
-![Image of the braille](./braille-example.png)
+![Image of the braille](https://a.storyblok.com/f/74682/228x109/030c357a8c/braille-example.png)
 
 In Binary Braille, we change the points marked by 1 and where we don't mark anything we put 0, for this variation of zeros and one, the abstraction is called Binary Braille.
 The same pattern of letters in the image above would look like this in the Binary Braille system:
