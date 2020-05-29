@@ -2,6 +2,8 @@
   <h1 align="center">Binary Braille Parser</h1>
 </p>
 
+[![npm version](https://badge.fury.io/js/bin-braille-parser.svg)](https://badge.fury.io/js/bin-braille-parser)
+
 ## How it works
 Binary Braille, nicknamed BinBraille, is an abstraction from conventional Braille, in Braille each letter, symbol or number is represented by 6 possible points, where with the combination of these points the letters are formed, following an example:
 
