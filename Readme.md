@@ -2,6 +2,8 @@
   <h1 align="center">Binary Braille Parser</h1>
 </p>
 
+*This readme has a [Brazilian Portuguese version](./Readme-pt_br.md) (pt-br).*
+
 [![npm version](https://badge.fury.io/js/bin-braille-parser.svg)](https://badge.fury.io/js/bin-braille-parser)
 ![npm downloads](https://img.shields.io/npm/dt/bin-braille-parser)
 
@@ -77,6 +79,6 @@ npm run test #or yarn test
 ----
 
 <p align="center">
-  <h5 align="center">Contribute to this project, send ideas and suggestions on <a href="https://github.com/Print-Dots/bin-braille-parser/issues">
+  <h5 align="center">Contribute to this project, send ideas and suggestions on <a href="https://github.com/Print-Dots/bin-braille-parser/issues" title="Link to project questions on Github">
   issues !</a></h5>
 </p>
