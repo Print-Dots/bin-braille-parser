@@ -1,7 +1,7 @@
 {
   "name": "bin-braille-parser",
   "version": "1.0.2",
-  "description": "A text converter for binary braille",
+  "description": "A text and symbol converter for binary braille",
   "main": "index.js",
   "scripts": {
     "dev": "node index.js",
@@ -13,7 +13,11 @@
   },
   "keywords": [
     "braille",
-    "bin-braille"
+    "bin-braille",
+    "parser",
+    "binary",
+    "6-point-braille",
+    "8-point-braille"
   ],
   "author": "Ademar Cardoso De Oliveira Júnior",
   "license": "MIT",
