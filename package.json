@@ -3,6 +3,7 @@
   "version": "1.0.2",
   "description": "A text and symbol converter for binary braille",
   "main": "index.js",
+  "types": "./types/index.d.ts",
   "scripts": {
     "dev": "node index.js",
     "test": "jest ./tests/"

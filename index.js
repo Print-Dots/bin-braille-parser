@@ -1,13 +1,14 @@
-
 /**
+ * @typedef {{ text: 'string', encoding: 'number' }} BinaryBinInstance
+ * 
  * @method parserTextToBinBraille
- * @param  {String} text
- * @param  {Number} encoding
- * @return {Array}
+ * @param  {String} text - Text to be converted, like 'Awesome text'
+ * @param  {Number} encoding - This is a Number to encoding, 6 for 6-point Braille (Conventional Braille) and 8 for Computer Braille Code
+ * @return {BinaryBinInstance} - The return can be 6 or 8 point braille, the default is 6 points
  */
 
-const { sixPointsEncoding } = require('./utils/schema-6-points')
-const { eightPointsEncoding } = require('./utils/schema-8-points')
+const { sixPointsEncoding } = require('./schema/schema-6-points')
+const { eightPointsEncoding } = require('./schema/schema-6-points')
 
 async function parserTextToBinBraille (text, encoding = 6) {
   if (text === '' || text === undefined || text.length === 0) {
@@ -30,6 +31,6 @@ p.then(function res(result) {
   console.log(result)
 })
 
-module.exports =  {
+module.exports = {
   parserTextToBinBraille
 }
