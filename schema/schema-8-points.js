@@ -38,6 +38,29 @@ async function eightPointsEncoding(text) {
       case 'w': parsedText[index_aux] = [['0', '1'], ['1', '1'], ['0', '1'], ['0', '0']]; index_aux++; break;
       case 'y': parsedText[index_aux] = [['1', '1'], ['0', '1'], ['1', '1'], ['0', '0']]; index_aux++; break;
       case 'z': parsedText[index_aux] = [['1', '0'], ['0', '1'], ['1', '1'], ['0', '0']]; index_aux++; break;
+
+      // simbols
+      case '!': parsedText[index_aux] = [['0', '1'], ['0', '1'], ['1', '1'], ['0', '0']]; index_aux++; break;
+      case '"': parsedText[index_aux] = [['0', '1'], ['0', '0'], ['0', '0'], ['0', '0']]; index_aux++; break;
+      case '#': parsedText[index_aux] = [['0', '0'], ['0', '1'], ['0', '1'], ['0', '0']]; index_aux++; break;
+      case '$': parsedText[index_aux] = [['0', '1'], ['0', '1'], ['0', '1'], ['0', '0']]; index_aux++; break;
+      case '%': parsedText[index_aux] = [['0', '1'], ['0', '0'], ['0', '1'], ['0', '0']]; index_aux++; break;
+      case '&': parsedText[index_aux] = [['1', '1'], ['1', '0'], ['1', '1'], ['0', '0']]; index_aux++; break;
+      case '’': parsedText[index_aux] = [['0', '0'], ['0', '0'], ['1', '0'], ['0', '0']]; index_aux++; break;
+      case '(': parsedText[index_aux] = [['0', '1'], ['0', '1'], ['0', '0'], ['0', '0']]; index_aux++; break;
+      case ')': parsedText[index_aux] = [['0', '1'], ['0', '1'], ['1', '0'], ['0', '0']]; index_aux++; break;
+      case ',': parsedText[index_aux] = [['0', '0'], ['1', '0'], ['0', '0'], ['0', '0']]; index_aux++; break;
+      case '-': parsedText[index_aux] = [['0', '0'], ['0', '0'], ['1', '1'], ['0', '0']]; index_aux++; break;
+      case '.': parsedText[index_aux] = [['0', '0'], ['1', '1'], ['0', '1'], ['0', '0']]; index_aux++; break;
+      case '/': parsedText[index_aux] = [['0', '1'], ['0', '0'], ['1', '0'], ['0', '0']]; index_aux++; break;
+      case ':': parsedText[index_aux] = [['0', '0'], ['1', '1'], ['0', '0'], ['0', '0']]; index_aux++; break;
+      case ';': parsedText[index_aux] = [['0', '0'], ['1', '0'], ['1', '0'], ['0', '0']]; index_aux++; break;
+      case '<': parsedText[index_aux] = [['0', '0'], ['1', '0'], ['1', '1'], ['0', '0']]; index_aux++; break;
+      case '=': parsedText[index_aux] = [['0', '0'], ['1', '1'], ['1', '1'], ['0', '0']]; index_aux++; break;
+      case '>': parsedText[index_aux] = [['0', '0'], ['0', '1'], ['1', '1'], ['0', '0']]; index_aux++; break;
+      case '?': parsedText[index_aux] = [['0', '0'], ['1', '0'], ['0', '1'], ['0', '0']]; index_aux++; break;
+      case '@': parsedText[index_aux] = [['0', '1'], ['1', '0'], ['1', '1'], ['1', '0']]; index_aux++; break;
+      case '+': parsedText[index_aux] = [['0', '0'], ['1', '1'], ['1', '1'], ['0', '0']]; index_aux++; break;
     }
 
     if (regexCapitalLetters.test(newText[i])) {
