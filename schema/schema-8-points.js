@@ -71,6 +71,21 @@ async function eightPointsEncoding(text) {
       }
     }
 
+    if (regexForNumbers.test(newText[i])) {
+      switch (newText[i]) {
+        case '0': parsedText[index_aux] = [['1', '1'], ['1', '1'], ['1', '1']]; index_aux++; break;
+        case '1': parsedText[index_aux] = [['1', '0'], ['0', '0'], ['0', '1']]; index_aux++; break;
+        case '2': parsedText[index_aux] = [['1', '0'], ['1', '0'], ['0', '1']]; index_aux++; break;
+        case '3': parsedText[index_aux] = [['1', '1'], ['0', '0'], ['0', '1']]; index_aux++; break;
+        case '4': parsedText[index_aux] = [['1', '1'], ['0', '1'], ['0', '1']]; index_aux++; break;
+        case '5': parsedText[index_aux] = [['1', '0'], ['0', '1'], ['0', '1']]; index_aux++; break;
+        case '6': parsedText[index_aux] = [['1', '1'], ['1', '0'], ['0', '1']]; index_aux++; break;
+        case '7': parsedText[index_aux] = [['1', '1'], ['1', '1'], ['0', '1']]; index_aux++; break;
+        case '8': parsedText[index_aux] = [['1', '0'], ['1', '1'], ['0', '1']]; index_aux++; break;
+        case '9': parsedText[index_aux] = [['0', '1'], ['1', '0'], ['0', '1']]; index_aux++; break;
+      }
+    }
+
   }
 
   return parsedText
