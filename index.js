@@ -8,7 +8,7 @@
  */
 
 const { sixPointsEncoding } = require('./schema/schema-6-points')
-const { eightPointsEncoding } = require('./schema/schema-6-points')
+const { eightPointsEncoding } = require('./schema/schema-8-points')
 
 async function parserTextToBinBraille (text, encoding = 6) {
   if (text === '' || text === undefined || text.length === 0) {
@@ -25,7 +25,7 @@ async function parserTextToBinBraille (text, encoding = 6) {
 
   return modifiedContent
 }
-let p = parserTextToBinBraille('a', 6)
+let p = parserTextToBinBraille('A', 8)
 
 p.then(function res(result) {
   console.log(result)
