@@ -6,7 +6,8 @@
   "types": "./types/index.d.ts",
   "scripts": {
     "dev": "node index.js",
-    "test": "jest ./tests/"
+    "test": "jest ./tests/",
+    "run:benchmark": "node ./benchmark/benchmark.js"
   },
   "repository": {
     "type": "git",

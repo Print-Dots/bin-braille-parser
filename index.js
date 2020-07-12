@@ -1,6 +1,4 @@
 /**
- * @typedef {{ text: 'string', encoding: 'number' }} BinaryBinInstance
- * 
  * @method parserTextToBinBraille
  * @param  {String} text - Text to be converted, like 'Awesome text'
  * @param  {Number} encoding - This is a Number to encoding, 6 for 6-point Braille (Conventional Braille) and 8 for Computer Braille Code
@@ -25,7 +23,8 @@ async function parserTextToBinBraille (text, encoding = 6) {
 
   return modifiedContent
 }
-let p = parserTextToBinBraille('A', 8)
+
+let p = parserTextToBinBraille('Á', 6)
 
 p.then(function res(result) {
   console.log(result)
