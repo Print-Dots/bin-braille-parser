@@ -58,9 +58,9 @@ const runBenchMarkBiggerText = async () => {
   await parserTextToBinBraille(biggerText, 6)
 }
 
-let t1 = "Time to converter a smallText 🚀"
-let t2 = "Time to converter a mediumText 🚀"
-let t3 = "Time to converter a biggerText 🚀"
+let t1 = "Time to converter a smallText (574 letters) 🚀"
+let t2 = "Time to converter a mediumText (1886 letters) 🚀"
+let t3 = "Time to converter a biggerText (+ 16.000 letters) 🚀"
 
 console.time(t1)
 runBenchMarkOfSmallText()

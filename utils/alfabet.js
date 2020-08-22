@@ -1,3 +1,8 @@
+/**
+ * @description This function returns alfabet letters in braille 6 dot encoding
+ * @method alfabet
+ * @return {array}
+ */
 const alfabet = () => [
   [['1', '0'], ['0', '0'], ['0', '0']],
   [['1', '0'], ['1', '0'], ['0', '0']],
